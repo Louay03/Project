@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:gorofat/presentation/hotel_Info/check_out_step1.dart';
 
 class HotelInfosPage extends StatelessWidget {
   final List<String> imageUrls = [
@@ -447,10 +449,7 @@ class HotelInfosPage extends StatelessWidget {
                           height: 64.h,
                           child: ElevatedButton(
                             onPressed: () {
-                              // Get.to(
-                              //get to home page
-
-                              // );
+                              Get.to(CheckoutStep1());
                             },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: const Color(0xff1C44B4),

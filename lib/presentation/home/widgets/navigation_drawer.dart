@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:gorofat/presentation/history.dart';
+import 'package:gorofat/presentation/property.dart';
+import 'package:gorofat/presentation/wallet.dart';
 
 class CustomDrawer extends StatelessWidget {
   final String imgUri;
@@ -21,7 +25,7 @@ class CustomDrawer extends StatelessWidget {
     return Align(
       alignment: Alignment.topLeft,
       child: Container(
-        margin: EdgeInsets.only(top: 58.h, bottom: 160.h),
+        margin: EdgeInsets.only(top: 58.h, bottom: 32.h),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10.r),
@@ -161,6 +165,7 @@ class CustomDrawer extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         // navigate to my wallet
+                        Get.to(Wallet());
                       },
                       child: ListTile(
                         leading: Image.asset(
@@ -199,6 +204,7 @@ class CustomDrawer extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         // navigate to stays
+                        Get.to(History());
                       },
                       child: ListTile(
                         leading: Image.asset(
@@ -208,6 +214,46 @@ class CustomDrawer extends StatelessWidget {
                         ),
                         title: Text(
                           "My stays",
+                          style: TextStyle(
+                            fontSize: 16.sp,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        // navigate to stays
+                        Get.to(History());
+                      },
+                      child: ListTile(
+                        leading: Image.asset(
+                          "assets/images/stays.png",
+                          height: 24.h,
+                          width: 30.w,
+                        ),
+                        title: Text(
+                          "History",
+                          style: TextStyle(
+                            fontSize: 16.sp,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        // navigate to stays
+                        Get.to(Property());
+                      },
+                      child: ListTile(
+                        leading: Image.asset(
+                          "assets/images/stays.png",
+                          height: 24.h,
+                          width: 30.w,
+                        ),
+                        title: Text(
+                          "My Property",
                           style: TextStyle(
                             fontSize: 16.sp,
                             color: Colors.white,

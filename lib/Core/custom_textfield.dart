@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextField extends StatelessWidget {
+  final Color? fillColor;
   final String hintText;
   final Widget? suffixIcon;
   const CustomTextField({
     Key? key,
     required this.hintText,
     this.suffixIcon,
+    this.fillColor,
   }) : super(key: key);
 
   @override
@@ -15,7 +17,7 @@ class CustomTextField extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
         filled: true,
-        fillColor: const Color(0xffD9D9D9).withOpacity(0.5),
+        fillColor: fillColor ?? const Color(0xffD9D9D9).withOpacity(0.5),
         hintText: hintText,
         hintStyle: TextStyle(fontSize: 12.sp, color: const Color(0xff878787)),
         border: OutlineInputBorder(
